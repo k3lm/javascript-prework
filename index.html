@@ -3,16 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <title>Kamień, papier, nożyce</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div class="container">
-      <div id="buttons"></div>
-      <!-- <button id="button-test">Test</button> -->
-      <button id="button-rock">Kamień</button>
-      <button id="button-paper">Papier</button>
-      <button id="button-scissors">Nożyce</button>
-      <div id="messages"></div>
+    <div class="splash">
+      <div class="container">
+        <div id="buttons">
+          <!-- <button id="button-test">Test</button> -->
+          <a id="button-rock" class="btn btn-rock">
+            <i class="fas fa-hand-back-fist"></i>
+          </a>
+          <a id="button-paper" class="btn btn-paper">
+            <i class="fas fa-hand"></i>
+          </a>
+          <a id="button-scissors" class="btn btn-scissors">
+            <i class="fas fa-hand-scissors"></i>
+          </a>
+        </div>
+        <div id="messages"></div>
+      </div>
     </div>
     <script src="js/functions.js"></script>
     <script src="js/script.js"></script>
