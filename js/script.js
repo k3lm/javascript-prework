@@ -3,6 +3,9 @@ var argButtonName,
   buttonPaper = document.getElementById('button-paper'),
   buttonScissors = document.getElementById('button-scissors')
 
+let playerScore = 0
+let computerScore = 0
+
 function getMoveName(argMoveId) {
   switch (argMoveId) {
     case 1:
@@ -23,17 +26,21 @@ function getMoveName(argMoveId) {
 
 function displayResult(argPlayerMove, argComputerMove) {
   if (
-    (argPlayerMove == 'papier' && argComputerMove == 'kamień') ||
-    (argPlayerMove == 'kamień' && argComputerMove == 'nożyce') ||
-    (argPlayerMove == 'nożyce' && argComputerMove == 'papier')
+    (argPlayerMove === 'papier' && argComputerMove === 'kamień') ||
+    (argPlayerMove === 'kamień' && argComputerMove === 'nożyce') ||
+    (argPlayerMove === 'nożyce' && argComputerMove === 'papier')
   ) {
     printMessage('Wygrywasz :)', 'win')
-  } else if (argPlayerMove == argComputerMove) {
+    playerScore++
+  } else if (argPlayerMove === argComputerMove) {
     printMessage('Remis :|', 'draw')
   } else {
     printMessage('Przegrałeś :(', 'lose')
+    computerScore++
   }
   printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove)
+  document.getElementById('scoreboard').innerHTML =
+    playerScore + ':' + computerScore
 }
 
 function buttonClicked(argButtonName) {
