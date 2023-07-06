@@ -36,7 +36,7 @@ header {
 
 .splash {
   height: 100vh;
-  background-image: url('https://i.postimg.cc/02xHkWWx/pexels-eberhard-grossgasteiger-1743392.jpg');
+  background-image: url('https://i.postimg.cc/66SBDH2h/pexels-karolina-grabowska-4814061.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -86,6 +86,12 @@ header {
 
   &:hover {
     transform: scale(1.2);
+    box-shadow: 0px 0px 24px 6px white;
+  }
+
+  &:active {
+    box-shadow: 0px 0px 24px 6px #badc58;
+    transition: none;
   }
 
   &:hover i {
@@ -93,7 +99,7 @@ header {
   }
 
   i {
-    color: rgba(1, 1, 1, 0.2);
+    color: rgba(255, 255, 255, 0.4);
     transition: color 0.5s ease-in-out;
   }
 }
