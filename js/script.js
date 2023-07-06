@@ -9,36 +9,34 @@ let computerScore = 0
 function getMoveName(argMoveId) {
   switch (argMoveId) {
     case 1:
-      return 'kamień'
+      return 'rock'
     case 2:
-      return 'papier'
+      return 'paper'
     case 3:
-      return 'nożyce'
+      return 'scissors'
     default:
       printMessage(
-        'Nie znam ruchu o id ' +
-          argMoveId +
-          '. Zakładam, że chodziło o "kamień".'
+        'Nie znam ruchu o id ' + argMoveId + '. Zakładam, że chodziło o "rock".'
       )
-      return 'kamień'
+      return 'rock'
   }
 }
 
 function displayResult(argPlayerMove, argComputerMove) {
   if (
-    (argPlayerMove === 'papier' && argComputerMove === 'kamień') ||
-    (argPlayerMove === 'kamień' && argComputerMove === 'nożyce') ||
-    (argPlayerMove === 'nożyce' && argComputerMove === 'papier')
+    (argPlayerMove === 'paper' && argComputerMove === 'rock') ||
+    (argPlayerMove === 'rock' && argComputerMove === 'scissors') ||
+    (argPlayerMove === 'scissors' && argComputerMove === 'paper')
   ) {
-    printMessage('Wygrywasz :)', 'win')
+    printMessage('You won :)', 'win')
     playerScore++
   } else if (argPlayerMove === argComputerMove) {
-    printMessage('Remis :|', 'draw')
+    printMessage("It's a draw :|", 'draw')
   } else {
-    printMessage('Przegrałeś :(', 'lose')
+    printMessage('You lost :(', 'lose')
     computerScore++
   }
-  printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove)
+  printMessage('I played ' + argComputerMove + ', you played ' + argPlayerMove)
   document.getElementById('scoreboard').innerHTML =
     playerScore + ':' + computerScore
 }
@@ -60,11 +58,11 @@ function buttonClicked(argButtonName) {
 }
 
 buttonRock.addEventListener('click', function () {
-  buttonClicked('kamień')
+  buttonClicked('rock')
 })
 buttonPaper.addEventListener('click', function () {
-  buttonClicked('papier')
+  buttonClicked('paper')
 })
 buttonScissors.addEventListener('click', function () {
-  buttonClicked('nożyce')
+  buttonClicked('scissors')
 })
