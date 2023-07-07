@@ -1,7 +1,6 @@
-var argButtonName,
-  buttonRock = document.getElementById('button-rock'),
-  buttonPaper = document.getElementById('button-paper'),
-  buttonScissors = document.getElementById('button-scissors')
+const buttonRock = document.getElementById('button-rock')
+const buttonPaper = document.getElementById('button-paper')
+const buttonScissors = document.getElementById('button-scissors')
 
 let playerScore = 0
 let computerScore = 0
@@ -43,17 +42,9 @@ function displayResult(argPlayerMove, argComputerMove) {
 
 function buttonClicked(argButtonName) {
   clearMessages()
-  var argMoveId,
-    argPlayerMove,
-    argComputerMove,
-    computerMove,
-    playerMove,
-    randomNumber,
-    playerInput
-
-  playerMove = argButtonName
-  randomNumber = Math.floor(Math.random() * 3 + 1)
-  computerMove = getMoveName(randomNumber)
+  const playerMove = argButtonName
+  const randomNumber = Math.floor(Math.random() * 3 + 1)
+  const computerMove = getMoveName(randomNumber)
   displayResult(playerMove, computerMove)
 }
 

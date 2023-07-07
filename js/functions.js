@@ -1,5 +1,5 @@
 function printMessage(msg, result) {
-  var div = document.createElement('div')
+  const div = document.createElement('div')
   div.innerHTML = msg
 
   switch (result) {
